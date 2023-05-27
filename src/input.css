@@ -1,3 +1,46 @@
-@tailwind base;
+git init@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+    @apply max-w-[140rem] mx-auto p-[1.5rem];
+}
+@layer components{
+
+    .header{
+        @apply relative bg-primary;
+    }    
+    .header.open{
+        @apply border-b-2 border-gray-400 transition-all;
+    }
+    .header__wrapper{
+        @apply flex items-center justify-between;
+    }
+    .header__nav{
+        @apply hidden lg:flex lg:justify-between;
+    }
+    .header__nav ul{
+        @apply flex items-center justify-between gap-10;
+    }
+    .header__nav ul li a{
+        @apply text-[1.2rem] font-semibold text-light;
+    }
+    .toggle__menu{
+        @apply  px-[.8rem] py-[1rem] lg:hidden;
+    }
+    .toggle__menu span{
+        @apply w-[2.3rem] h-[.4rem] bg-light block rounded-full transition-all;
+    }
+    .toggle__menu span:nth-child(2){
+        @apply my-[.3rem];
+    }
+    .toggle__menu.open span:nth-child(1){
+        @apply origin-center translate-y-[.5rem] rotate-[45deg] transition-all;
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all;
+    }
+    .toggle__menu.open span:nth-child(3){
+        @apply origin-center -translate-y-[.4rem] rotate-[-45deg] transition-all;
+    }
+}

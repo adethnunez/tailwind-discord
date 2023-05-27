@@ -556,8 +556,118 @@ video {
   }
 }
 
+.header {
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 78 237 / var(--tw-bg-opacity));
+}
+
+.header.open {
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.header__nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.toggle__menu {
+  padding-left: .8rem;
+  padding-right: .8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .toggle__menu {
+    display: none;
+  }
+}
+
+.toggle__menu span {
+  display: block;
+  height: .4rem;
+  width: 2.3rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.toggle__menu span:nth-child(2) {
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+}
+
+.toggle__menu.open span:nth-child(1) {
+  transform-origin: center;
+  --tw-translate-y: .5rem;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.toggle__menu.open span:nth-child(2) {
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.toggle__menu.open span:nth-child(3) {
+  transform-origin: center;
+  --tw-translate-y: -.4rem;
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 140rem;
+  padding: 1.5rem;
 }
 
 .group:hover .group-hover\:underline {
