@@ -8,7 +8,7 @@
 @layer components{
 
     .header{
-        @apply relative bg-primary lg:pl-[10rem] lg:pr-[5rem];
+        @apply relative bg-primary lg:pl-[10rem] lg:pr-[5rem] pb-0 z-[999];
     }    
     .header.open{
         @apply border-b-2 border-gray-400 transition-all;
@@ -76,6 +76,10 @@
     }
     .header__button{
         @apply mx-[1.5rem] my-[13rem] lg:hidden;
+    }
+
+    .banner{
+      
     }
 
 }

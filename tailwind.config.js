@@ -6,7 +6,7 @@ module.exports = {
       colors:{
         dark:'#23272a',
         light: '#ffffff',
-        primary: '#404eed',
+        primary: '#2f55f3',
         grey: '#f6f6f6',
       },
       screens: {
@@ -15,7 +15,7 @@ module.exports = {
         'lg': '1024px',
         'xl': '1280px',
         '2xl': '1536px',
-      }
+      },
 
     },
   },
