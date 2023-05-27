@@ -1,14 +1,14 @@
-git init@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .container{
-    @apply max-w-[140rem] mx-auto p-[1.5rem];
+    @apply max-w-[140rem] mx-auto p-[1.5rem] pl-[3rem];
 }
 @layer components{
 
     .header{
-        @apply relative bg-primary;
+        @apply relative bg-primary lg:pl-[10rem] lg:pr-[5rem];
     }    
     .header.open{
         @apply border-b-2 border-gray-400 transition-all;
@@ -17,30 +17,65 @@ git init@tailwind base;
         @apply flex items-center justify-between;
     }
     .header__nav{
-        @apply hidden lg:flex lg:justify-between;
+        @apply lg:flex lg:justify-between lg:items-center;
     }
     .header__nav ul{
-        @apply flex items-center justify-between gap-10;
+        @apply hidden lg:flex items-center justify-between gap-10;
     }
     .header__nav ul li a{
-        @apply text-[1.2rem] font-semibold text-light;
+        @apply text-[1rem] font-semibold text-light;
+    }
+    .btn.lgi {
+        @apply bg-light px-[1rem] py-[.5rem] rounded-full text-[.9rem] font-semibold text-dark  w-full text-center m-auto justify-end lg:ml-[5rem] hover:text-primary transition-all ml-[9em]
     }
     .toggle__menu{
-        @apply  px-[.8rem] py-[1rem] lg:hidden;
+        @apply  px-[.8rem] py-[1rem] lg:hidden ;
     }
     .toggle__menu span{
-        @apply w-[2.3rem] h-[.4rem] bg-light block rounded-full transition-all;
+        @apply w-[2rem] h-[.3rem] bg-light block rounded-full mr-0;
     }
     .toggle__menu span:nth-child(2){
         @apply my-[.3rem];
     }
     .toggle__menu.open span:nth-child(1){
-        @apply origin-center translate-y-[.5rem] rotate-[45deg] transition-all;
+        @apply origin-center translate-y-[.5rem] rotate-[45deg] transition-all ;
     }
     .toggle__menu.open span:nth-child(2){
         @apply opacity-0 transition-all;
     }
     .toggle__menu.open span:nth-child(3){
-        @apply origin-center -translate-y-[.4rem] rotate-[-45deg] transition-all;
+        @apply origin-center -translate-y-[.7rem] rotate-[-45deg] transition-all  ;
     }
+
+    .header__actions{
+        @apply absolute top-[0] w-[20rem]  bg-opacity-50 right-0 max-h-0 overflow-hidden transition-all duration-500 lg:relative lg:max-h-[50rem] lg:bg-transparent lg:top-0 lg:w-[15rem] ;
+    }
+    .header__logo{
+        @apply lg:hidden pt-[2.2rem] pl-[1rem] mb-[1.5rem] 
+    }
+    .header__actions.open{
+        @apply max-h-fit transition-all duration-100 ease-linear bg-red-200 rounded-[.4rem];
+    }
+    .header__actions ul{
+        @apply lg:hidden ml-[2rem] mr-[4.5rem] border-t-2 border-gray-200; 
+    }
+    .header__actions ul li{
+        @apply pt-[2.5rem] px-[1.5rem] ;
+    }
+    .header__actions ul li:nth-child(1) {
+        @apply bg-gray-200 pt-[1rem] pb-[.5rem] rounded-[.5rem] text-blue-400 mt-[.6rem]
+    }
+    .header__actions ul li a:not{
+        @apply text-[1rem] font-semibold text-dark  ;
+    }
+    .header__actions i{
+        @apply ml-[1rem]
+    }
+    .header__button a{
+        @apply  bg-primary px-[1rem] py-[.8rem] rounded-full text-[.8rem] font-semibold text-light inline-block w-full text-center hover:opacity-[.9] mt-[7rem];
+    }
+    .header__button{
+        @apply mx-[1.5rem] my-[13rem] lg:hidden;
+    }
+
 }
