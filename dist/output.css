@@ -566,7 +566,8 @@ video {
 
 @media (min-width: 1024px) {
   .header {
-    padding-left: 10rem;
+    margin: auto;
+    padding-left: 19rem;
     padding-right: 5rem;
   }
 }
@@ -604,6 +605,7 @@ video {
 @media (min-width: 1024px) {
   .header__nav ul {
     display: flex;
+    text-align: center;
   }
 }
 
@@ -612,6 +614,12 @@ video {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .header__nav ul li a {
+    text-align: center;
+  }
 }
 
 .btn.lgi {
@@ -792,7 +800,6 @@ video {
 }
 
 .header__button a {
-  margin-top: 7rem;
   display: inline-block;
   width: 100%;
   border-radius: 9999px;
@@ -826,7 +833,132 @@ video {
   }
 }
 
-.banner{
+.banner {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .banner__wrapper {
+    text-align: center;
+  }
+}
+
+.banner__title h1 {
+  margin-bottom: 1.5rem;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .banner__title h1 {
+    margin-top: 5rem;
+    font-size: 4rem;
+  }
+}
+
+.banner__title p {
+  margin-bottom: 1.5rem;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: .9rem;
+  font-weight: 200;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .banner__title p {
+    margin: auto;
+    width: 50rem;
+    font-size: 1.4rem;
+  }
+}
+
+.banner__btn {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .banner__btn ul {
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .banner__btn ul li {
+    margin-top: 2rem;
+  }
+}
+
+.banner__btn .btn.dl {
+  margin-bottom: 2rem;
+  display: inline-block;
+  width: 100%;
+  justify-content: flex-end;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  --tw-text-opacity: 1;
+  color: rgb(35 39 42 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.banner__btn .btn.dl:hover {
+  --tw-text-opacity: 1;
+  color: rgb(47 85 243 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .banner__btn .btn.dl {
+    margin: auto;
+  }
+}
+
+.banner__btn .btn.opn {
+  margin-bottom: 2rem;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  justify-content: flex-end;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 39 42 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.banner__btn .btn.opn:hover {
+  --tw-scale-x: 1.01;
+  --tw-scale-y: 1.01;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  .banner__btn .btn.opn {
+    margin: auto;
+  }
 }
 
 .relative {
@@ -837,8 +969,8 @@ video {
   height: 40rem;
 }
 
-.w-\[33rem\] {
-  width: 33rem;
+.w-full {
+  width: 100%;
 }
 
 .cursor-pointer {
@@ -868,9 +1000,5 @@ video {
 @media (min-width: 1024px) {
   .lg\:h-\[35rem\] {
     height: 35rem;
-  }
-
-  .lg\:w-\[120rem\] {
-    width: 120rem;
   }
 }

@@ -8,7 +8,7 @@
 @layer components{
 
     .header{
-        @apply relative bg-primary lg:pl-[10rem] lg:pr-[5rem] pb-0 z-[999];
+        @apply relative bg-primary lg:pl-[19rem] lg:pr-[5rem] pb-0 z-[999] lg:m-auto;
     }    
     .header.open{
         @apply border-b-2 border-gray-400 transition-all;
@@ -17,13 +17,13 @@
         @apply flex items-center justify-between;
     }
     .header__nav{
-        @apply lg:flex lg:justify-between lg:items-center;
+        @apply lg:flex lg:justify-between lg:items-center ;
     }
     .header__nav ul{
-        @apply hidden lg:flex items-center justify-between gap-10;
+        @apply hidden lg:flex items-center justify-between gap-10 lg:text-center;
     }
     .header__nav ul li a{
-        @apply text-[1rem] font-semibold text-light;
+        @apply text-[1rem] font-semibold text-light lg:text-center;
     }
     .btn.lgi {
         @apply bg-light px-[1rem] py-[.5rem] rounded-full text-[.9rem] font-semibold text-dark  w-full text-center m-auto justify-end lg:ml-[5rem] hover:text-primary transition-all ml-[9em]
@@ -72,14 +72,38 @@
         @apply ml-[1rem]
     }
     .header__button a{
-        @apply  bg-primary px-[1rem] py-[.8rem] rounded-full text-[.8rem] font-semibold text-light inline-block w-full text-center hover:opacity-[.9] mt-[7rem];
+        @apply  bg-primary px-[1rem] py-[.8rem] rounded-full text-[.8rem] font-semibold text-light inline-block w-full text-center hover:opacity-[.9];
     }
     .header__button{
         @apply mx-[1.5rem] my-[13rem] lg:hidden;
     }
 
     .banner{
-      
+      @apply py-5
+    }
+    .banner__wrapper{
+        @apply lg:text-center ;
+    }
+    .banner__title h1{
+        @apply text-light font-serif text-[25px] font-extrabold mb-[1.5rem] lg:text-[4rem] lg:mt-[5rem]
+    }
+    .banner__title p{
+        @apply text-light font-serif font-extralight mb-[1.5rem] text-[.9rem] lg:text-[1.4rem] lg:m-auto lg:w-[50rem]
+    }
+    .banner__btn{
+        @apply flex
+    }
+    .banner__btn ul{
+        @apply lg:flex lg:m-auto lg:gap-[2rem]
+    }
+    .banner__btn ul li{
+        @apply lg:mt-[2rem]
+    }
+    .banner__btn .btn.dl{
+        @apply bg-light px-[1rem] py-[.5rem] rounded-full text-[1.1rem] text-dark  w-full text-center lg:m-auto justify-end  hover:text-primary transition-all mb-[2rem] inline-block;
+    }
+    .banner__btn .btn.opn{
+        @apply bg-dark px-[1rem] py-[.5rem] rounded-full text-[1.1rem] text-light  w-full text-center lg:m-auto justify-end transition-all inline-block  drop-shadow-2xl mb-[2rem] cursor-pointer hover:scale-[1.01]
     }
 
 }
