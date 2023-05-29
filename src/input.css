@@ -167,73 +167,93 @@
     }
 
     
-    .links{
-        @apply bg-ldark pl-0 pt-[4rem]
+    .footer{
+        @apply bg-dark py-[2rem]
     }
-    .links__wrapper{
-        @apply border-b-2 border-primary
+
+    .footer__wrapper{
+        @apply lg:grid lg:grid-cols-[1.5fr_3fr] lg:justify-between
     }
-    .lang{
-        @apply flex pb-[1.5rem]
+
+    .lang a{
+        @apply flex items-center text-light
     }
-    .lang_img img{
-        @apply mr-[.5rem] max-w-[1.5rem]
-    }
-    .lang p{
-        @apply text-light text-[.7rem]
-    }
+
     .lang i{
-        @apply text-light text-[.5rem] ml-[.3rem] mt-[.2rem]
+        @apply ml-[.5rem] text-[.8rem]
     }
+
+    .lang img{
+        @apply w-[2rem] h-[1.2rem] mr-[.5rem]
+    }
+
     .icon{
-        @apply text-light mb-[2rem]
-    }
-    .icon  a{
-        @apply mr-[1rem] 
+        @apply my-[2rem]
     }
 
-      .footer__links{
-        @apply block lg:grid lg:grid-cols-4;
-    }
-    .footer__links__item h4{
-        @apply text-[1.2rem] font-semibold mb-2 cursor-pointer flex justify-between lg:cursor-default text-primary lg:m-auto lg:ml-[19rem];
-    }
-    .footer__links__item h4 i{
-        @apply transition-all lg:hidden;
-    }
-    .footer__links__item h4 i.open{
-        @apply -rotate-180 transition-all;
-    }
-    .footer__links__item ul{
-        @apply max-h-0 overflow-hidden mb-5 transition-all lg:max-h-fit lg:m-auto lg:ml-[19rem];
-    }
-    .footer__links__item ul.open{
-        @apply max-h-[60rem] duration-500;
-    }
-    .footer__links__item ul li{
-        @apply py-5 px-2 w-fit lg:py-1 lg:px-1;
-    }
-    .footer__links__item ul li a{
-        @apply bg-transparent inline-block text-light hover:underline transition-all;
+    .icon ul{
+        @apply flex items-center
     }
 
-
-    .dis__wrapper{
-        @apply flex
+    .icon ul li{
+        @apply mr-[1.5rem]
     }
 
-    .dis__btn ul{
-        @apply flex items-center justify-between pt-[1rem]
+    .icon ul li a{
+        @apply text-light text-[1.5rem]
     }
 
-    .dis__btn ul li a{
+    .footer__content{
+        @apply lg:grid lg:grid-cols-4
+    }
+
+    .footer__item{
+        @apply text-light mb-[1.5rem] lg:ml-[2rem]
+    }
+
+    .footer__item h4{
+        @apply flex justify-between text-primary text-[1rem] cursor-pointer lg:mb-[1rem]
+    }
+
+    .footer__item i{
+        @apply text-light transition ease-linear duration-300 lg:hidden;
+    }
+
+    .footer__item i.open{
+        @apply transition ease-linear duration-300 rotate-[180deg];
+    }
+
+    .footer__item ul{
+        @apply max-h-0 overflow-hidden transition ease-linear duration-300 lg:max-h-[100%]
+    }
+
+    .footer__item ul.open{
+        @apply max-h-[50rem] p-[1rem] transition ease-linear duration-300
+    }
+
+    .footer__item ul li{
+        @apply mb-[1rem]
+    }
+
+    .footer__item ul li a:hover{
+        @apply underline
+    }
+
+    .footer__btn{
+        @apply border-t-[1px] border-primary
+    }
+
+    .footer__btn ul{
+        @apply flex items-center justify-between pt-[2.5rem]
+    }
+
+    .footer__btn ul li a{
         @apply text-light
     }
 
-    .dis__btn ul li:last-child a{
-        @apply bg-[hsl(235,86.1%,71.8%)] text-[.8rem] font-[600] py-[.5rem] px-[1rem] rounded-full ml-[10rem]
+    .footer__btn ul li:last-child a{
+        @apply bg-[hsl(235,86.1%,71.8%)] text-[.8rem] font-[600] py-[.5rem] px-[1rem] rounded-full
     }
-
 }
 
     /* .theme__item{

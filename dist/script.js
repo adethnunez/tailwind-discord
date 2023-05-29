@@ -6,10 +6,10 @@ toggleMenu.addEventListener("click", () => {
 });
 
 //  footer LINKS
-const flinks = document.querySelectorAll(".footer__links__item h4");
-flinks.forEach((baba) => {
-  baba.addEventListener("click", () => {
-    baba.nextElementSibling.classList.toggle("open");
-    baba.querySelector("i").classList.toggle("open");
+const faqs = document.querySelectorAll(".footer__item h4");
+faqs.forEach((drop) => {
+  drop.addEventListener("click", () => {
+    drop.nextElementSibling.classList.toggle("open");
+    drop.querySelector("i").classList.toggle("open");
   });
 });
