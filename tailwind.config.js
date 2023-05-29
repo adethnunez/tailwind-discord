@@ -8,6 +8,7 @@ module.exports = {
         light: '#ffffff',
         primary: '#2f55f3',
         grey: '#f6f6f6',
+        ldark: '#23272a',
       },
       screens: {
         'sm': '640px',
